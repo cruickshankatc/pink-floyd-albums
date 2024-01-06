@@ -28,6 +28,25 @@
   color: #61dafb;
 }
 
+.main {
+  display: flex;
+}
+
+.albumCovers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  background-color: pink;
+}
+
+.albumCovers img{
+  width: 150px;
+}
+
+.displayAlbum img {
+  width: 500px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
