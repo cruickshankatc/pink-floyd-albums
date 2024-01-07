@@ -1,9 +1,7 @@
-import SwitchDisplay from './SwitchDisplay';
-
-function DisplayAlbum() {
+function DisplayAlbum({ imageSource }) {
   return (
     <section className="displayAlbum">
-      <img onClick={SwitchDisplay} id="displayImage" src="/images/thewall.jpg" alt=""/>
+      <img id="displayImage" src={imageSource} alt="" />
     </section>
   ) 
 }

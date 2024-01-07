@@ -1,21 +1,27 @@
-function AlbumCovers () {
+function AlbumCovers ({ onCoverClick }) {
+
+  const handleCoverClick = (event) => {
+    const clickedImageSrc = event.target.src;
+    onCoverClick(clickedImageSrc);
+  }
+
   return (
     <section className="albumCovers">
-      <img src="/images/piper.jpg" alt="" />
-      <img src="/images/asaucerfulofsecrets.jpg" alt="" />
-      <img src="/images/more.jpg" alt="" />
-      <img src="/images/ummagumma.jpg" alt="" />
-      <img src="/images/atomheartmother.jpg" alt="" />
-      <img src="/images/meddle.jpg" alt="" />
-      <img src="/images/obscuredbyclouds.jpg" alt="" />
-      <img src="/images/thedarksideofthemoon.jpg" alt="" />
-      <img src="/images/wishyouwerehere.jpg" alt="" />
-      <img src="/images/animals.jpg" alt="" />
-      <img src="/images/thewall.jpg" alt="" />
-      <img src="/images/thefinalcut.jpg" alt="" />
-      <img src="/images/amomentarylapseofreason.jpg" alt="" />
-      <img src="/images/thedivisionbell.jpg" alt="" />
-      <img src="/images/theendlessriver.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/piper.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/asaucerfulofsecrets.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/more.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/ummagumma.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/atomheartmother.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/meddle.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/obscuredbyclouds.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/thedarksideofthemoon.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/wishyouwerehere.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/animals.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/thewall.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/thefinalcut.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/amomentarylapseofreason.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/thedivisionbell.jpg" alt="" />
+      <img onClick={handleCoverClick} src="/images/theendlessriver.jpg" alt="" />
     </section>
   );
 }
