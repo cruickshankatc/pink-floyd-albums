@@ -7,17 +7,23 @@ import AlbumInfo from './AlbumInfo';
 
 function App() {
   const [imageSource, setImageSource] = useState("/images/thewall.jpg");
+  const [titleSource, setTitleSource] = useState("The Wall");
+  const [yearSource, setYearSource] = useState("1979");
+  const [ratingSource, setRatingSource] = useState("4");
 
-  const handleTerClick = (clickedImageSrc) => {
+  const handleTerClick = (clickedImageSrc, clickedTitleSrc, clickedYearSrc, clickedRatingSrc) => {
     setImageSource(clickedImageSrc);
+    setTitleSource(clickedTitleSrc);
+    setYearSource(clickedYearSrc);
+    setRatingSource(clickedRatingSrc);
   }
 
   return (
     <div className="App">
       <section className="main">
         <AlbumCovers onCoverClick={handleTerClick} />
-        <DisplayAlbum imageSource={imageSource} />
-        <Test testProp="test" />
+        <DisplayAlbum imageSource={imageSource} titleSource={titleSource} yearSource={yearSource} ratingSource={ratingSource} />
+        <Test testProp="suby" />
       </section>
     </div>
   );

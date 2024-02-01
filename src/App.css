@@ -43,6 +43,11 @@
   width: 150px;
 }
 
+.displayAlbum {
+  display: flex;
+  flex-direction: column;
+}
+
 .displayAlbum img {
   width: 500px;
 }
