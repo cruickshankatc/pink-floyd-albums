@@ -11,11 +11,11 @@ function App() {
   const [yearSource, setYearSource] = useState("1979");
   const [ratingSource, setRatingSource] = useState("4");
 
-  const handleTerClick = (clickedImageSrc, clickedTitleSrc, clickedYearSrc, clickedRatingSrc) => {
-    setImageSource(clickedImageSrc);
-    setTitleSource(clickedTitleSrc);
-    setYearSource(clickedYearSrc);
-    setRatingSource(clickedRatingSrc);
+  const handleTerClick = (clickedAlbum) => {
+    setImageSource(clickedAlbum.coverArt);
+    setTitleSource(clickedAlbum.title);
+    setYearSource(clickedAlbum.year);
+    setRatingSource(clickedAlbum.rating);
   }
 
   return (
